@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        html{
+            background-color: white;
+        }
+        .container {
+            display: grid;
+            grid-template-areas: 
+            "header header"
+            "menu content"
+            "footer footer";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 1fr 3fr;
+            gap: 5px;
+            background-color: white
+            box-sizing: border-box;
+        }
+        .container > div {
+            background-color: lightgreen;
+            padding: 10px;
+        }
+        .container > div.header {
+            grid-area: header;
+            text-align: left;
+            border: 10px;
+        }
+        .container > div.menu {
+            grid-area: menu;
+        }
+        .container > div.content{
+            grid-area: content;
+        }
+        .container > div.footer{
+            grid-area: footer;
+        }
+        .ac{
+            text-align: center;
+        }
+        #contenido {
+            margin: 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header"><h2 class="ac">Placeholder Título de la Empresa<img src="logo.png" height="30px" align="right" margin-left="10vmax"><img></h2></div>
+
+        <div class="menu ac"><h3>Menu</h3>
+            <button onclick="mostrarMision()" >Misión</button><br>
+            <button onclick="mostrarVision()" >Visión</button><br>
+            <button onclick="mostrarContactos()" >Contactos</button><br>
+        </div>
+
+        <div class="content"><h3 class="ac">Main</h3>
+            <div id="contenido">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer sagittis diam sed tellus placerat, 
+             ut gravida elit mattis. Sed auctor finibus lacinia. Sed eros nisi, fermentum id diam non, bibendum condimentum quam. 
+             Aenean ut tincidunt ante. Curabitur quis magna ac mauris volutpat bibendum quis nec tortor. Nunc hendrerit, nibh sit amet rhoncus fringilla, 
+             metus justo scelerisque nibh, ac cursus est eros ut velit. Quisque congue leo ante, vitae congue tortor tempus sit amet. 
+             Proin id nunc ultricies, tincidunt tortor a, auctor purus. Maecenas ut diam non dui fringilla hendrerit. Suspendisse vel libero ante.
+             Donec tincidunt, velit sed volutpat placerat, ante tortor cursus lacus, in ullamcorper arcu elit vel quam. Ut ultrices, 
+             neque id viverra feugiat, lectus felis sodales purus, in ullamcorper sapien odio ut magna. In rutrum nibh vel nunc ultrices,
+             non commodo magna viverra. Morbi quis suscipit dolor.</p>
+            </div> 
+         </div>
+         <div class="footer" class="ac"><h4>Footer</h4></div>
+    </div>
+
+    <script>
+        function mostrarMision() {
+                contenido.innerHTML = "<p>Nuestra misión es ...</p>";
+        }
+        function mostrarVision() {
+                contenido.innerHTML = "<p>Nuestra visión es ...</p>";
+        }
+        function mostrarContactos() {
+                contenido.innerHTML = "<p>Contactos van aquí.</p>";
+        }
+    </script>
+</body>
+</html>
